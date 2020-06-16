@@ -22,14 +22,24 @@
  */
 
 function countLetter(string, letter) {
-  // This is your job. :)
+  let array =[];
+  for (l of string) {
+    if(letter === l) {
+      array.push(1);
+    } else {
+      //return false;
+    }
+  }
+  return array.length;
+
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for countLetter:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(countletter('Running sanity checks for countLetter:'));
+  console.log(countletter('hello', 'l')); // => 2
+  console.log(countletter('Mississippi', 's')); // => 4
+  console.log(countletter('Mississippi', 'x')); // => 0
+  console.log(countletter('Mississippi', 'm')); // => 0 (no lower-case m's) 
 }
 
 module.exports = countLetter;
